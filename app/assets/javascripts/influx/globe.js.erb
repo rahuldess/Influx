@@ -1,0 +1,18 @@
+Influx.Globe = function(params = {}) {
+
+  if ( !$.isEmptyObject(params) ) {
+    loader = new THREE.TextureLoader();
+
+    loader.load("<%= image_path('animated_world.jpg') %>", function ( texture ) {
+      var sphereGeometry = new THREE.SphereGeometry( params.radius, params.width, params.height );
+      var sphereMaterial = new THREE.MeshBasicMaterial({ map: texture, overdraw: 0.5 });
+      var sphereMesh     = new THREE.Mesh( sphereGeometry, sphereMaterial );
+
+      group.add( sphereMesh );
+    });
+  } else {
+    console.log("Trouble with Initializing Globe");
+    return;
+  }
+
+};

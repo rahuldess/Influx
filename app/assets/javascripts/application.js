@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require animation/three.min
+//= require animation/orbit_controls
+//= require influx_namespace
+//= require influx/init_set

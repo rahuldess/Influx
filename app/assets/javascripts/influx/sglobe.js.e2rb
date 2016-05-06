@@ -1,0 +1,108 @@
+Influx.addGlobe = function () {
+
+  var HOV    = 60,
+      NEAR   = 1,
+      FAR    = 2000,
+      RADIUS = 300,
+      WIDTH  = 50,
+      HEIGHT = 50;
+
+  var camera,
+      renderer,
+      scene,
+      group,
+      loader,
+      sphereMesh,
+      sphereGeometry,
+      sphereMaterial,
+      position,
+      controls;
+
+  (function init() {
+    setupCamera();
+    setupRenderer();
+    trackMouseMovement();
+    intializeScene();
+    initalizeGlobe();
+    addStars();
+    // addEventSource();
+    animate();
+  })();
+
+  function setupCamera() {
+    camera = new THREE.PerspectiveCamera(HOV, window.innerWidth / window.innerHeight, NEAR, FAR);
+    camera.position.z = 700;
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+  };
+
+  function setupRenderer() {
+    renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor( 0x000000 );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    document.body.appendChild( renderer.domElement );
+  };
+
+  function trackMouseMovement() {
+    controls = new THREE.OrbitControls( camera );
+    controls.addEventListener( 'change', render );
+    controls.enableZoom = false;
+  };
+
+  function intializeScene() {
+    scene = new THREE.Scene();
+    group = new THREE.Group();
+    scene.add( group );
+  };
+
+  function initalizeGlobe(image_name) {
+    loader = new THREE.TextureLoader();
+
+    loader.load("<%= image_path('animated_world.jpg') %>", function ( texture ) {
+      sphereGeometry = new THREE.SphereGeometry( RADIUS, WIDTH, HEIGHT );
+      sphereMaterial = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
+      sphereMesh     = new THREE.Mesh( sphereGeometry, sphereMaterial );
+      group.add( sphereMesh );
+    });
+  };
+
+  function addStars() {
+    var particleGeometry = new THREE.Geometry();
+    var pMaterial = new THREE.PointsMaterial({
+      color: 0xFFFFFF,
+      size: 1.5
+    });
+
+    var particleCount = 10000;
+
+    for(i=0; i<= particleCount; i++) {
+      var pX = Math.random() * 3000 - 1000,
+          pY = Math.random() * 3000 - 1000,
+          pZ = Math.random() * 3000 - 1000;
+
+      var particle = new THREE.Vector3(pX, pY, pZ);
+
+      // add it to the geometry
+      particleGeometry.vertices.push(particle);
+    }
+
+    // create the particle system
+    var particleSystem = new THREE.Points( particleGeometry, pMaterial);
+    group.add(particleSystem);
+  };
+
+
+  function animate() {
+    requestAnimationFrame( animate );
+    controls.update();
+    group.rotation.z += 0.03;
+    render();
+  };
+
+  function render() {
+    renderer.render( scene, camera );
+  };
+
+
+};
