@@ -14,5 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require three
-//= require example
-//= require_tree .
