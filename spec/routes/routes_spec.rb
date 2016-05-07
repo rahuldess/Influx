@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe "Routes", type: :routing do
 
   it 'Routes to Root path' do
