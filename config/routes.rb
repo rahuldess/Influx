@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#show'
-
   get '/subscriber' => 'subscribe#feed', as: :subscriber
   get '/stream'     => 'stream#call',    as: :stream
 
