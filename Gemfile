@@ -21,8 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'em-http-request', '~> 1.1', '>= 1.1.3'
 
-gem 'single_user_oauth', path: '/Users/rsambari/Documents/single_user_oauth'
-# gem 'single_user_oauth', :git => 'https://github.com/rahuldess/single_user_oauth.git', branch: 'rs-gem-initial'
+gem 'single_user_oauth'
 
 gem 'yajl-ruby', require: 'yajl'
 
