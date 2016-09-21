@@ -1,1 +1,10 @@
-WEBGL
+<div id='track_key'>
+  <%= form_tag(stream_path, remote: true, method: :get) do %>
+    <%= text_field_tag :track, params[:track], placeholder: 'Track Keywords', autocomplete: 'off', required: true %>
+    <%= submit_tag "Track" %>
+  <% end %>
+
+  <br>
+  <input type="text" id="total_count" placeholder= 'Total Count', disabled>
+
+</div>

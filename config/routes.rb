@@ -1,9 +1,16 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'main#show'
+  get '/subscriber' => 'subscribe#feed', as: :subscriber
+  get '/stream'     => 'stream#call',    as: :stream
+
+  mount Sidekiq::Web, at: '/sidekiq'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
