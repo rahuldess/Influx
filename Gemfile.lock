@@ -97,12 +97,8 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-<<<<<<< HEAD
-    puma (3.4.0)
-=======
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
->>>>>>> 853dd6b30cc139e041e6908753d52d4d1dc3edbc
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -135,10 +131,7 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
-<<<<<<< HEAD
     redis (3.2.2)
-=======
->>>>>>> 853dd6b30cc139e041e6908753d52d4d1dc3edbc
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -213,10 +206,7 @@ DEPENDENCIES
   jquery-rails
   puma
   rails (= 4.2.6)
-<<<<<<< HEAD
   redis (~> 3.2)
-=======
->>>>>>> 853dd6b30cc139e041e6908753d52d4d1dc3edbc
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

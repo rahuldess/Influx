@@ -54,10 +54,6 @@ gem 'sinatra', :require => false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-<<<<<<< HEAD
-=======
-
->>>>>>> 853dd6b30cc139e041e6908753d52d4d1dc3edbc
   gem 'rspec-rails', '~> 3.0'
 end
 
