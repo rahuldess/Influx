@@ -1,5 +1,5 @@
 == Whats it about ?
-Main intention of this project was to work & gain experience in 3D modeling using THREE.js library (https://threejs.org/).
+Main intention of this project was to put creativity to test and gain more experience in 3D modeling using THREE.js library (https://threejs.org/).
 
 == Learnings from this project:
 
