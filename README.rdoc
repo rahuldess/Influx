@@ -17,3 +17,8 @@ Make sure to install <code> redis </code> in your machine before starting the pr
 1. Just clone this repo and run <code> foreman start </code>. 
 2. Goto http://localhost:4000 ... you will see beautiful globe spinning :)
 
+=== Getting real-time data from Twitter streaming api based on tweets lat/long:
+https://cloud.githubusercontent.com/assets/4582543/20336743/6f3dab10-ab81-11e6-8b9f-5b0acb86ea75.png
+
+=== Track tweets, keywords and get total count:
+https://cloud.githubusercontent.com/assets/4582543/20336749/763e7084-ab81-11e6-912b-7fd7bb793bb1.png
