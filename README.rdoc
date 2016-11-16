@@ -1,28 +1,19 @@
-== README
+== Whats it about ?
+Main intention of this project was to work & gain experience in 3D modeling using THREE.js library (https://threejs.org/).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Learnings from this project:
 
-Things you may want to cover:
+* 3D modeling using THREE.js
+* Creating RubyGem (https://github.com/rahuldess/single_user_oauth) as part of this project.
+* Working with Twitter Streaming API (https://dev.twitter.com/streaming/overview)
+* Working on event-driven I/O (https://github.com/eventmachine/eventmachine)
+* Working with <code> ActionController::Live </code> in Ruby on Rails.
+* Working with Redis Pub/Sub.
+* Working with sidekiq (Background process).
 
-* Ruby version
+== How to make it work in my machine ?
+=== Pre-requisite: 
+Make sure to install <code> redis </code> in your machine before starting the project.
+1. Just clone this repo and run <code> foreman start </code>. 
+2. Goto http://localhost:4000 ... you will see beautiful globe spinning :)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
